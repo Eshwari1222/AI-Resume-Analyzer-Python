@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Analysis Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="container">
+
+    <h1>📊 Job Match Result</h1>
+    <h2>{{ job }}</h2>
+
+    <div class="badge">{{ verdict }}</div>
+
+    <p class="summary">🤖 {{ summary }}</p>
+
+    <div class="progress">
+        <div class="bar" style="width: {{ score }}%">{{ score }}%</div>
+    </div>
+
+    <h3>⚠️ Recommended Skills</h3>
+    <ul>
+        {% for skill in missing_skills %}
+            <li>📌 {{ skill | capitalize }}</li>
+        {% endfor %}
+    </ul>
+
+    <div class="actions">
+        <a href="/">🔁 Analyze Another</a>
+    </div>
+
+</div>
+</body>
+</html>
+
