@@ -1,0 +1,86 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #667eea, #764ba2, #f093fb);
+    background-size: 300% 300%;
+    animation: bg 8s infinite alternate;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes bg {
+    from { background-position: 0% }
+    to { background-position: 100% }
+}
+
+.container {
+    background: rgba(255,255,255,0.18);
+    backdrop-filter: blur(16px);
+    border-radius: 20px;
+    padding: 30px;
+    width: 420px;
+    color: white;
+    text-align: center;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+}
+
+input, select {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 10px;
+    border: none;
+}
+
+button {
+    background: linear-gradient(90deg, #00c6ff, #0072ff);
+    border: none;
+    padding: 14px;
+    width: 100%;
+    color: white;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.progress {
+    background: rgba(255,255,255,0.2);
+    border-radius: 20px;
+    height: 25px;
+    margin: 15px 0;
+}
+
+.bar {
+    height: 100%;
+    border-radius: 20px;
+    background: linear-gradient(90deg, #00ffcc, #00c3ff);
+    animation: grow 1.5s ease;
+}
+
+@keyframes grow {
+    from { width: 0; }
+}
+
+.badge {
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 12px;
+    background: rgba(0,0,0,0.25);
+    font-weight: bold;
+}
+
+.summary {
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+.actions a {
+    display: inline-block;
+    margin-top: 15px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
